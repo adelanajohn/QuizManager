@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h2>{% block title %}Quiz Result{% endblock title %}</h2>
+{% endblock header %}
+
+{% block content %}
+    <p> {{ resultMessage }} </p>
+    
+  <p>
+    Take quiz again: <a href="{{ url_for('pages.home') }}">Quiz</a>.
+  </p>
+
+{% endblock content %}

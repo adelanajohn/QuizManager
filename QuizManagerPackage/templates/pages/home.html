@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h2>{% block title %}Home{% endblock title %}</h2>
+{% endblock header %}
+
+{% block content %}
+  <p>
+    Test your inner genius!
+  </p>
+  
+  <form method="post" action="/quiz">
+    
+    <div class="form-group">
+      <label for="topic">Choose a topic:</label>
+      <select name="topic" id="topic" class="form-control">
+        <option value="DevOps">DevOps</option>
+        <option value="Databases">Databases</option>
+        <option value="Containers">Containers</option>
+        <option value="GenAI">GenAI</option>
+        <option value="Python">Python</option>
+        <option value="Java Script">Java Script</option>
+        <option value="AWS">AWS</option>
+        <option value="Physics">Physics</option>
+        <option value="Chemistry">Chemistry</option>
+        <option value="Tangled Movie">Tangled Movie</option>
+        <option value="Lord of the Rings">Lord of the Rings</option>
+        <option value="Italy">Italy</option>
+        <option value="Lean Startup">Lean Startup</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="topic">Choose difficulty level:</label>
+      <select name="difficulty" id="difficulty" class="form-control">
+        <option value="Easy">Easy</option>
+        <option value="Difficult">Difficult</option>
+      </select>
+    </div>
+
+    <p></p>
+    <div class="form-group">
+        <input type="submit" value="Submit" class="submit-btn">
+    </div>
+  </form>
+
+{% endblock content %}
