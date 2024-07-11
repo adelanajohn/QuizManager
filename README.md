@@ -1,2 +1,2 @@
 # QuizManager
-GenAI Quiz Manager
+GenAI Quiz Managers 
