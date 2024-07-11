@@ -4,6 +4,7 @@ import json
 
 bp = Blueprint("pages", __name__)
 
+# Home page
 @bp.route("/", methods=("GET", "POST"))
 def home():
     session['quizFlag']="1"
@@ -93,7 +94,7 @@ def quiz():
           
         return render_template("pages/quiz.html", questionIndex=questionIndex, questionCount=questionCount, question=question, answer=answer, option1=option1, option2=option2, option3=option3, option4=option4, score=session['score'])
     return render_template("pages/home.html")
-        
+
 
 def get_response(topic, difficulty_level): #
     bedrock=boto3.client(service_name="bedrock-runtime")
@@ -113,7 +114,7 @@ def get_response(topic, difficulty_level): #
     </example>
     """
     
-    prompt_data="Please generate 5 questions on " + topic + ". Difficulty level is " + difficulty_level + ". Please include four options and the correct answer. Ensure that the options are unique. Output response is json format." + prompt_example
+    prompt_data="Please generate 5 questions on " + topic + ". Difficulty level is " + difficulty_level + ". Please include four options and the correct answer. Output response is json format." + prompt_example
 
     payload={
         "anthropic_version": "bedrock-2023-05-31",

@@ -3,7 +3,6 @@
 {% block header %}
 {% endblock header %}
 
-
 {% block content %} 
   <p>    
     Question {{ questionIndex }} of {{ questionCount }}.
@@ -13,10 +12,8 @@
 
   <p><strong>{{ question }}</strong></p>
   
-  
   <form method="post" action="/quiz">
 
-    
     <div class="form-group">
         <input type="radio" id="optionA" name="QuestionOptions" value="A">
         <label for="optionA">{{ option1 }}</label><br>
@@ -39,7 +36,6 @@
     </div>
 
   </form>
-
 
   <button onclick="showAnswer()">Show Answer...</button>
   <div id="divAnswer" style="display: none;">
